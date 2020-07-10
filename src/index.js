@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+
+/* -- Custom styles for this dashboard -- */
+import './assets/app.css';
 
 ReactDOM.render(
   <React.StrictMode>
