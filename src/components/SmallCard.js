@@ -38,9 +38,5 @@ SmallCard.propTypes = {
 
 }
 
-// Un objeto que tenga determinada estructura
-/* optionalObjectWithShape: PropTypes.shape({
-    color: PropTypes.string,
-    fontSize: PropTypes.number */
 
 export default SmallCard;
