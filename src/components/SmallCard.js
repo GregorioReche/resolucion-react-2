@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes, { string } from 'prop-types'
 
 function SmallCard(props){
     return(
-        props.atributes.map( (atributes) => {
+        props.atributes.map( (atributes, index) => {
             return (
-            <div className="col-md-4 mb-4">
+            <div className="col-md-4 mb-4" key={index}>
                 <div className={`card border-left-${atributes.color} shadow h-100 py-2`}>
                     <div className="card-body">
                         <div className="row no-gutters align-items-center">
@@ -23,5 +24,23 @@ function SmallCard(props){
         )
     )
 }
+
+/* ACCEDIENDO A PROPIEDADES DE OBJETOS DENTRO DE UN ARRAY */
+
+SmallCard.propTypes = {
+    atributes: PropTypes.arrayOf(
+        PropTypes.shape({
+            color: string.isRequired,
+            title: string.isRequired,
+            cuantity: string.isRequired
+        })
+    )
+
+}
+
+// Un objeto que tenga determinada estructura
+/* optionalObjectWithShape: PropTypes.shape({
+    color: PropTypes.string,
+    fontSize: PropTypes.number */
 
 export default SmallCard;
