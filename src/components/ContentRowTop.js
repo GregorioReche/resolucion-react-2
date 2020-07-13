@@ -8,8 +8,8 @@ import SmallCard from './SmallCard';
 let productsInDB = {
     title: 'Products in Data Base',
     color: 'primary', 
-    cuantity: '135',
-    icon: 'fas fa-clipboard-list fa-2x text-gray-300'
+    cuantity: 34,
+    icon: 'fa-clipboard-list'
 }
 
 /* <!-- $$$ of all products in DB --> */
@@ -18,7 +18,7 @@ let amountOfProducts = {
     title:'Amounts in products', 
     color:'success',
     cuantity:'$546.456', 
-    icon:'fas fa-dollar-sign fa-2x text-gray-300'
+    icon:'fa-dollar-sign'
 }
 
 /* <!-- Amount of users in DB --> */
@@ -27,7 +27,7 @@ let amountOfUsers = {
     title:'Users quantity' ,
     color:'warning',
     cuantity:'38',
-    icon:'fas fa-user-check fa-2x text-gray-300'
+    icon:'fa-user-check'
 }
 
 let cartProps = [productsInDB, amountOfProducts, amountOfUsers];

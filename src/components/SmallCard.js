@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { string } from 'prop-types'
+import PropTypes from 'prop-types'
 
 function SmallCard(props){
     return(
@@ -14,7 +14,7 @@ function SmallCard(props){
                                 <div className="h5 mb-0 font-weight-bold text-gray-800">{atributes.cuantity}</div>
                             </div>
                             <div className="col-auto">
-                                <i className={atributes.icon}></i>
+                                <i className={`fas ${atributes.icon} fa-2x text-gray-300`}></i>
                             </div>
                         </div>
                     </div>
@@ -25,14 +25,35 @@ function SmallCard(props){
     )
 }
 
+/* DEFINICIÓN DE PROPIEDADES POR DEFAULT */
+
+SmallCard.defaulProps = {
+    atributes: [
+        {
+        title: 'Title',
+        color: 'primary', 
+        cuantity: 'No Cuatity',
+        icon: 'fa-clipboard-list'
+        }  
+    ]
+}
+
 /* ACCEDIENDO A PROPIEDADES DE OBJETOS DENTRO DE UN ARRAY */
 
 SmallCard.propTypes = {
     atributes: PropTypes.arrayOf(
         PropTypes.shape({
-            color: string.isRequired,
-            title: string.isRequired,
-            cuantity: string.isRequired
+            color: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            cuantity: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number,
+            ]).isRequired,
+            icon: PropTypes.oneOf([
+                'fa-clipboard-list',
+                'fa-dollar-sign',
+                'fa-user-check'
+            ])
         })
     )
 
