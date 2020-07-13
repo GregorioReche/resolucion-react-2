@@ -1,15 +1,12 @@
 import React from 'react';
-import NavBar from './NavBar';
 import ContentRowTop from './ContentRowTop';
 import ContentRowBottom from './ContentRowBottom'
+import Chart from './Chart';
 
 function MainContent(){
     return (
-        <React.Fragment>
         
-            <NavBar />
-
-            {/* <!-- Begin Page Content --> */}
+            /* <!-- Begin Page Content --> */
             <div className="container-fluid">
                 
                 {/* <!-- Page Heading --> */}
@@ -20,10 +17,12 @@ function MainContent(){
                 <ContentRowTop />
                 
                 <ContentRowBottom />
+
+                <Chart />
             
             </div>
 
-        </React.Fragment>
+
     )
 }
 

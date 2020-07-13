@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from './NavBar';
 import MainContent from './MainContent';
 import Footer from './Footer';
 
@@ -7,6 +8,7 @@ function Content(){
 
         /* <!-- Content Wrapper --> */
 		<div id="content-wrapper" className="d-flex flex-column">
+            <NavBar />
             
             <MainContent />
 
