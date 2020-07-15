@@ -1,7 +1,7 @@
 import React from 'react';
 import ChartRow from './ChartRow';
 
-let TableRowsData = [
+let tableRowsData = [
     {
         Name: 'Tiger Nixon',
         Description: 'System Architect',
@@ -50,8 +50,11 @@ function Chart (){
                             </tr>
                         </tfoot>
                         <tbody>
-                            
-                            <ChartRow data={TableRowsData} />
+                            {
+                            tableRowsData.map( ( row , i) => {
+                                return <ChartRow { ...row} key={i}/>
+                            })
+                            }
 
                         </tbody>
                     </table>

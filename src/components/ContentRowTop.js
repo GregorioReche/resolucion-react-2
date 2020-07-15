@@ -16,8 +16,8 @@ let productsInDB = {
 
 let amountOfProducts = {
     title:'Amounts in products', 
-    color:'success',
-    cuantity:'$546.456', 
+    color:'success', 
+    cuantity: '$546.456',
     icon:'fa-dollar-sign'
 }
 
@@ -34,9 +34,14 @@ let cartProps = [productsInDB, amountOfProducts, amountOfUsers];
 
 function ContentRowTop(){
     return (
+    
         <div className="row">
+            
+            {cartProps.map( (product, i) => {
 
-            <SmallCard atributes={cartProps} />
+                return <SmallCard {...product} key={i}/>
+            
+            })}
 
         </div>
     )
